@@ -94,6 +94,7 @@ if has("gui_running")
   let s:changebg   = "#5F5F87"
   let s:changefg   = "#d7d7ff"
   let s:darkblue   = "#00005f"
+  let s:lightgreen   = "#7de34e"
   let s:darkcyan   = "#005f5f"
   let s:darkred    = "#5f0000"
   let s:darkpurple = "#5f005f"
@@ -110,6 +111,7 @@ else
   let s:darkcyan   = "24"
   let s:darkred    = "52"
   let s:darkpurple = "53"
+  let s:lightgreen   = "120"
   if g:hybrid_use_Xresources == 1
     let s:foreground = "15"   " White
     let s:selection  = "8"    " DarkGrey
@@ -190,6 +192,7 @@ exe "let s:fg_green      = ' ".s:vmode."fg=".s:green     ."'"
 exe "let s:fg_aqua       = ' ".s:vmode."fg=".s:aqua      ."'"
 exe "let s:fg_blue       = ' ".s:vmode."fg=".s:blue      ."'"
 exe "let s:fg_purple     = ' ".s:vmode."fg=".s:purple    ."'"
+exe "let s:fg_lightgreen     = ' ".s:vmode."fg=".s:lightgreen    ."'"
 exe "let s:fg_window     = ' ".s:vmode."fg=".s:window    ."'"
 exe "let s:fg_darkcolumn = ' ".s:vmode."fg=".s:darkcolumn."'"
 exe "let s:fg_addbg      = ' ".s:vmode."fg=".s:addbg     ."'"
@@ -329,7 +332,7 @@ exe "hi! String"          .s:fg_green       .s:bg_none        .s:fmt_none
 "		Float"
 
 exe "hi! Identifier"      .s:fg_purple      .s:bg_none        .s:fmt_none
-exe "hi! Function"        .s:fg_blue      .s:bg_none        .s:fmt_none
+exe "hi! Function"        .s:fg_lightgreen      .s:bg_none        .s:fmt_none
 
 exe "hi! Statement"       .s:fg_blue        .s:bg_none        .s:fmt_none
 "		Conditional"
